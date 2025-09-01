@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Luxe Fragrances</title>
+    <meta name="description" content="Admin dashboard for managing products, orders, and store analytics.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Luxe Fragrances Admin</h1>
+                <span class="tagline">Dashboard</span>
+            </div>
+            <nav class="nav" aria-label="Admin navigation">
+                <ul>
+                    <li><a href="products.html" aria-label="Go to products page">Products</a></li>
+                    <li><a href="#products" aria-label="Go to products management">Products Management</a></li>
+                    <li><a href="#orders" aria-label="Go to orders management">Orders</a></li>
+                    <li><a href="#analytics" aria-label="Go to analytics section">Analytics</a></li>
+                    <li><a href="index.html" aria-label="Return to main store">Back to Store</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="logout-btn" class="auth-link" type="button" aria-label="Logout from admin panel">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="admin-section">
+                <h2>Dashboard Overview</h2>
+                
+                <div class="dashboard-overview">
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-products">0</div>
+                        <div class="stat-label">Total Products</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="aliexpress-products">0</div>
+                        <div class="stat-label">AliExpress Products</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-orders">0</div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-revenue">$0.00</div>
+                        <div class="stat-label">Total Revenue</div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-content">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <h3>Recent Products</h3>
+                            <div id="recent-products">
+                                <p>Loading recent products...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <h3>Recent Orders</h3>
+                            <div id="recent-orders">
+                                <p>Loading recent orders...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Management -->
+            <section id="products" class="admin-section" aria-label="Product management">
+                <div class="section-header">
+                    <h2>Product Management</h2>
+                    <button id="add-product-btn" class="cta-button" type="button" aria-label="Add new product">
+                        <i class="fas fa-plus" aria-hidden="true"></i> Add New Product
+                    </button>
+                </div>
+
+                <!-- Add/Edit Product Form (initially hidden) -->
+                <div id="product-form-container" class="form-container" style="display: none;">
+                    <h3 id="form-title">Add New Product</h3>
+                    <form id="product-form" class="admin-form">
+                        <input type="hidden" id="product-id">
+                        <div class="form-group">
+                            <label for="product-name">Product Name</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Price ($)</label>
+                            <input type="number" id="product-price" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Image URL</label>
+                            <input type="url" id="product-image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-description">Description</label>
+                            <textarea id="product-description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-type">Type</label>
+                            <input type="text" id="product-type" placeholder="Eau de Parfum, Eau de Toilette, etc." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-volume">Volume</label>
+                            <input type="text" id="product-volume" placeholder="100ml, 50ml, etc." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-concentration">Concentration</label>
+                            <input type="text" id="product-concentration" placeholder="15-20%, 5-15%, etc." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-notes">Fragrance Notes</label>
+                            <textarea id="product-notes" rows="2" placeholder="Top: ..., Middle: ..., Base: ..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-rating">Rating (0-5)</label>
+                            <input type="number" id="product-rating" min="0" max="5" step="0.1" value="4.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-reviews">Number of Reviews</label>
+                            <input type="number" id="product-reviews" min="0" value="100">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">Save Product</button>
+                            <button type="button" id="cancel-form" class="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Products List -->
+                <div class="products-list">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Rating</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table-body">
+                            <!-- Products will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Orders Management -->
+            <section id="orders" class="admin-section">
+                <div class="section-header">
+                    <h2>Order Management</h2>
+                </div>
+
+                <!-- Orders List -->
+                <div class="orders-list">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table-body">
+                            <!-- Orders will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- AliExpress Integration Section -->
+            <section id="aliexpress" class="admin-section">
+                <div class="section-header">
+                    <h2>AliExpress Integration</h2>
+                    <button type="button" class="cta-button" id="refresh-aliexpress">
+                        <i class="fas fa-sync-alt"></i> Refresh Products
+                    </button>
+                </div>
+                
+                <div class="aliexpress-section">
+                    <div class="aliexpress-header">
+                        <h3>Store Connection Status</h3>
+                        <div class="aliexpress-status">
+                            <div class="status-indicator"></div>
+                            <span class="status-text">Checking connection...</span>
+                            <span class="product-count">0 products</span>
+                            <span class="last-sync">Last sync: Never</span>
+                        </div>
+                    </div>
+                    
+                    <div class="aliexpress-info">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h4>Store ID</h4>
+                                <p>1103441068</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>API Provider</h4>
+                                <p>RapidAPI</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Sync Frequency</h4>
+                                <p>Every 6 hours</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Max Products</h4>
+                                <p>50 per sync</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="aliexpress-controls">
+                        <button type="button" class="cta-button" id="manual-refresh">
+                            <i class="fas fa-sync-alt"></i> Manual Sync
+                        </button>
+                        <button type="button" class="cta-button secondary" id="test-connection">
+                            <i class="fas fa-plug"></i> Test Connection
+                        </button>
+                        <button type="button" class="cta-button secondary" id="view-logs">
+                            <i class="fas fa-list"></i> View Logs
+                        </button>
+                    </div>
+                    
+                    <div class="sync-history">
+                        <h4>Recent Sync History</h4>
+                        <div class="history-list" id="sync-history">
+                            <p>No sync history available</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="admin-section">
+                <div class="section-header">
+                    <h2>Sales Analytics</h2>
+                </div>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Top Selling Products</h3>
+                        <div id="top-products-list">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Recent Activity</h3>
+                        <div id="recent-activity">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">Confirm Action</h3>
+            <p id="modal-message">Are you sure you want to perform this action?</p>
+            <div class="modal-actions">
+                <button id="modal-confirm" class="confirm-btn">Confirm</button>
+                <button id="modal-cancel" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Message Container -->
+    <div id="admin-message" class="admin-message" style="display: none;" role="alert" aria-live="polite"></div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/aliexpress.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

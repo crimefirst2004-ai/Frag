@@ -1,0 +1,146 @@
+{
+    "name": "Luxe Fragrances - Premium Perfumes & Colognes",
+    "short_name": "Luxe Fragrances",
+    "description": "Discover luxury fragrances with our premium collection of perfumes and colognes. Shop authentic designer fragrances and exclusive scents.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#667eea",
+    "theme_color": "#764ba2",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["shopping", "lifestyle", "beauty"],
+    "icons": [
+        {
+            "src": "favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "screenshots/desktop-home.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Homepage on desktop"
+        },
+        {
+            "src": "screenshots/mobile-home.png",
+            "sizes": "375x667",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Homepage on mobile"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Shop Products",
+            "short_name": "Shop",
+            "description": "Browse our fragrance collection",
+            "url": "/#products",
+            "icons": [
+                {
+                    "src": "icons/shop-icon.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "My Account",
+            "short_name": "Account",
+            "description": "Access your account and orders",
+            "url": "/account.html",
+            "icons": [
+                {
+                    "src": "icons/account-icon.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Search Fragrances",
+            "short_name": "Search",
+            "description": "Search for specific fragrances",
+            "url": "/#search",
+            "icons": [
+                {
+                    "src": "icons/search-icon.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "edge_side_panel": {
+        "preferred_width": 400
+    },
+    "launch_handler": {
+        "client_mode": "navigate-existing"
+    },
+    "handle_links": "preferred",
+    "protocol_handlers": [
+        {
+            "protocol": "web+luxe",
+            "url": "/?fragment=%s"
+        }
+    ],
+    "file_handlers": [
+        {
+            "action": "/",
+            "accept": {
+                "text/csv": [".csv"],
+                "application/json": [".json"]
+            }
+        }
+    ],
+    "share_target": {
+        "action": "/share",
+        "method": "POST",
+        "enctype": "multipart/form-data",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url"
+        }
+    },
+    "permissions": [
+        "notifications",
+        "background-sync"
+    ],
+    "features": [
+        "Cross Platform",
+        "fast",
+        "simple"
+    ],
+    "developer": {
+        "name": "Luxe Fragrances Team",
+        "url": "https://luxefragrances.com"
+    }
+}

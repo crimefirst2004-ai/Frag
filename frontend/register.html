@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Luxe Fragrances | Create Your Account</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Create your Luxe Fragrances account to start shopping for luxury fragrances and beauty products. Join our community of fragrance enthusiasts.">
+    <meta name="keywords" content="register, sign up, create account, luxury fragrances, perfume, new user">
+    <meta name="author" content="Luxe Fragrances">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxefragrances.com/register">
+    <meta property="og:title" content="Register - Luxe Fragrances | Create Your Account">
+    <meta property="og:description" content="Create your Luxe Fragrances account to start shopping for luxury fragrances and beauty products.">
+    <meta property="og:image" content="https://luxefragrances.com/images/og-register.jpg">
+    <meta property="og:site_name" content="Luxe Fragrances">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luxefragrances.com/register">
+    <meta property="twitter:title" content="Register - Luxe Fragrances | Create Your Account">
+    <meta property="twitter:description" content="Create your Luxe Fragrances account to start shopping for luxury fragrances and beauty products.">
+    <meta property="twitter:image" content="https://luxefragrances.com/images/og-register.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://luxefragrances.com/register">
+    
+    <!-- Performance & Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://via.placeholder.com">
+    
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Register - Luxe Fragrances",
+        "description": "Create your Luxe Fragrances account to start shopping for luxury fragrances and beauty products.",
+        "url": "https://luxefragrances.com/register"
+    }
+    </script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span class="top-bar-text">Free shipping on orders over $50</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#" class="top-bar-link" onclick="openHelpModal()">Help</a>
+                <a href="#" class="top-bar-link" onclick="openTrackOrderModal()">Track Order</a>
+                <a href="login.html" class="top-bar-link">Sign In</a>
+                <a href="register.html" class="top-bar-link">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <h1>Luxe Fragrances</h1>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for fragrances, beauty products..." id="search-input">
+                        <button type="button" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions" id="search-suggestions"></div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="user-account" onclick="window.location.href='account.html'">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </div>
+                    <div class="wishlist" onclick="window.location.href='wishlist.html'">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                    </div>
+                    <div class="cart" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="register-section">
+            <div class="container">
+                <div class="register-container">
+                    <div class="register-form-container">
+                        <div class="register-header">
+                            <h2>Create Your Account</h2>
+                            <p>Join our community of fragrance enthusiasts</p>
+                        </div>
+                        
+                        <form id="register-form" class="register-form">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="firstName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="lastName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                                <small>Must be at least 8 characters long</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" id="confirm-password" name="confirmPassword" required>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for exclusive offers
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Create Account
+                            </button>
+                        </form>
+
+                        <div class="register-divider">
+                            <span>or</span>
+                        </div>
+
+                        <div class="social-login">
+                            <a href="http://localhost:5000/api/auth/google" class="social-btn google-btn" aria-label="Continue with Google">
+                                <i class="fab fa-google"></i>
+                                Continue with Google
+                            </a>
+                            <a href="http://localhost:5000/api/auth/facebook" class="social-btn facebook-btn" aria-label="Continue with Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                Continue with Facebook
+                            </a>
+                        </div>
+
+                        <div class="register-footer">
+                            <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="register-benefits">
+                        <h3>Why Create an Account?</h3>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <i class="fas fa-shopping-bag"></i>
+                                <div>
+                                    <h4>Faster Checkout</h4>
+                                    <p>Save your information for quick and easy purchases</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>Wishlist</h4>
+                                    <p>Save your favorite fragrances for later</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-gift"></i>
+                                <div>
+                                    <h4>Exclusive Offers</h4>
+                                    <p>Get access to member-only discounts and promotions</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <h4>Order Tracking</h4>
+                                    <p>Track your orders and view order history</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Loyalty Rewards</h4>
+                                    <p>Earn points on every purchase</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-user-cog"></i>
+                                <div>
+                                    <h4>Personalized Experience</h4>
+                                    <p>Receive recommendations based on your preferences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxe Fragrances</h3>
+                    <p>Your destination for luxury fragrances and beauty products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html#perfumes">Perfumes</a></li>
+                        <li><a href="products.html#colognes">Colognes</a></li>
+                        <li><a href="products.html#beauty">Beauty Products</a></li>
+                        <li><a href="products.html#gift-sets">Gift Sets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxe Fragrances. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Track Order Modal -->
+    <div id="track-order-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Track Your Order</h3>
+                <button type="button" class="modal-close" onclick="closeTrackOrderModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="track-order-form">
+                    <p>Enter your order number and email address to track your order status.</p>
+                    <form id="track-order-form" onsubmit="handleTrackOrder(event)">
+                        <div class="form-group">
+                            <label for="order-number">Order Number</label>
+                            <input type="text" id="order-number" name="orderNumber" required placeholder="Enter your order number">
+                        </div>
+                        <div class="form-group">
+                            <label for="track-email">Email Address</label>
+                            <input type="email" id="track-email" name="email" required placeholder="Enter your email address">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Track Order</button>
+                            <button type="button" class="btn-secondary" onclick="closeTrackOrderModal()">Cancel</button>
+                        </div>
+                    </form>
+                    <div id="tracking-results" class="tracking-results" style="display: none;">
+                        <h4>Order Status</h4>
+                        <div class="order-status">
+                            <div class="status-timeline">
+                                <div class="status-step completed">
+                                    <div class="status-icon"><i class="fas fa-check"></i></div>
+                                    <div class="status-info">
+                                        <h5>Order Placed</h5>
+                                        <p>Your order has been confirmed</p>
+                                        <span class="status-date">Dec 15, 2024 - 2:30 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-step completed">
+                                    <div class="status-icon"><i class="fas fa-check"></i></div>
+                                    <div class="status-info">
+                                        <h5>Processing</h5>
+                                        <p>Your order is being prepared</p>
+                                        <span class="status-date">Dec 16, 2024 - 10:15 AM</span>
+                                    </div>
+                                </div>
+                                <div class="status-step active">
+                                    <div class="status-icon"><i class="fas fa-shipping-fast"></i></div>
+                                    <div class="status-info">
+                                        <h5>Shipped</h5>
+                                        <p>Your order is on its way</p>
+                                        <span class="status-date">Dec 17, 2024 - 3:45 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-step">
+                                    <div class="status-icon"><i class="fas fa-home"></i></div>
+                                    <div class="status-info">
+                                        <h5>Delivered</h5>
+                                        <p>Package will be delivered</p>
+                                        <span class="status-date">Estimated: Dec 19, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-details">
+                            <h4>Order Details</h4>
+                            <div class="order-info">
+                                <p><strong>Order Number:</strong> <span id="display-order-number">LF-2024-001234</span></p>
+                                <p><strong>Order Date:</strong> <span>December 15, 2024</span></p>
+                                <p><strong>Total Amount:</strong> <span>$89.99</span></p>
+                                <p><strong>Shipping Address:</strong> <span>123 Main St, City, State 12345</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tracking-message" class="message" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Help & Support</h3>
+                <button type="button" class="modal-close" onclick="closeHelpModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="help-content">
+                    <div class="help-section">
+                        <h4><i class="fas fa-shipping-fast"></i> Shipping Information</h4>
+                        <ul>
+                            <li><strong>Free Shipping:</strong> Available on orders over $50</li>
+                            <li><strong>Standard Shipping:</strong> 3-5 business days</li>
+                            <li><strong>Express Shipping:</strong> 1-2 business days</li>
+                            <li><strong>International Shipping:</strong> Available to select countries</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-undo"></i> Returns & Exchanges</h4>
+                        <ul>
+                            <li><strong>Return Policy:</strong> 30-day return window</li>
+                            <li><strong>Condition:</strong> Items must be unused and in original packaging</li>
+                            <li><strong>Refund Process:</strong> 5-7 business days after receiving return</li>
+                            <li><strong>Exchanges:</strong> Available for different sizes or products</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-lock"></i> Account & Security</h4>
+                        <ul>
+                            <li><strong>Password Reset:</strong> Use the "Forgot Password" link on login page</li>
+                            <li><strong>Account Security:</strong> Enable two-factor authentication</li>
+                            <li><strong>Order History:</strong> View all past orders in your account</li>
+                            <li><strong>Wishlist:</strong> Save items for later purchase</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-phone"></i> Contact Information</h4>
+                        <ul>
+                            <li><strong>Customer Service:</strong> 1-800-LUXE-FRAG (1-800-589-3372)</li>
+                            <li><strong>Email:</strong> support@luxefragrances.com</li>
+                            <li><strong>Live Chat:</strong> Available 24/7 on our website</li>
+                            <li><strong>Business Hours:</strong> Monday-Friday 9AM-6PM EST</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-question-circle"></i> Frequently Asked Questions</h4>
+                        <div class="faq-item">
+                            <h5>How do I track my order?</h5>
+                            <p>Click on "Track Order" in the top bar and enter your order number and email address.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>What if I forgot my password?</h5>
+                            <p>Click on "Forgot Password" on the login page to reset your password via email.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>Are your products authentic?</h5>
+                            <p>Yes, all our products are 100% authentic and sourced directly from authorized distributors.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>Do you ship internationally?</h5>
+                            <p>Yes, we ship to most countries. Shipping rates and delivery times vary by location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

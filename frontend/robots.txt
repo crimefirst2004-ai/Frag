@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin.html
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+
+# Disallow JavaScript and CSS files from being indexed
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
+
+# Allow important pages
+Allow: /index.html
+Allow: /login.html
+Allow: /account.html
+Allow: /about/
+Allow: /products/
+Allow: /contact/
+
+# Sitemap location
+Sitemap: https://luxefragrances.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1

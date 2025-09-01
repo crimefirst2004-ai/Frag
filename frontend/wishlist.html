@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Luxe Fragrances | Your Saved Items</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="View and manage your wishlist of luxury fragrances and beauty products. Save your favorite items for later purchase.">
+    <meta name="keywords" content="wishlist, saved items, luxury fragrances, perfume, beauty products">
+    <meta name="author" content="Luxe Fragrances">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxefragrances.com/wishlist">
+    <meta property="og:title" content="Wishlist - Luxe Fragrances | Your Saved Items">
+    <meta property="og:description" content="View and manage your wishlist of luxury fragrances and beauty products.">
+    <meta property="og:image" content="https://luxefragrances.com/images/og-wishlist.jpg">
+    <meta property="og:site_name" content="Luxe Fragrances">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luxefragrances.com/wishlist">
+    <meta property="twitter:title" content="Wishlist - Luxe Fragrances | Your Saved Items">
+    <meta property="twitter:description" content="View and manage your wishlist of luxury fragrances and beauty products.">
+    <meta property="twitter:image" content="https://luxefragrances.com/images/og-wishlist.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://luxefragrances.com/wishlist">
+    
+    <!-- Performance & Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://via.placeholder.com">
+    
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Wishlist - Luxe Fragrances",
+        "description": "View and manage your wishlist of luxury fragrances and beauty products.",
+        "url": "https://luxefragrances.com/wishlist"
+    }
+    </script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span class="top-bar-text">Free shipping on orders over $50</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#" class="top-bar-link">Help</a>
+                <a href="#" class="top-bar-link">Track Order</a>
+                <a href="login.html" class="top-bar-link">Sign In</a>
+                <a href="register.html" class="top-bar-link">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <h2>Luxe Fragrances</h2>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for fragrances, beauty products..." id="search-input">
+                        <button type="button" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions" id="search-suggestions"></div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="user-account" onclick="window.location.href='account.html'">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </div>
+                    <div class="wishlist active" onclick="window.location.href='wishlist.html'">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                    </div>
+                    <div class="cart" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="wishlist-section">
+            <div class="container">
+                <div class="wishlist-header">
+                    <h1>Your Wishlist</h1>
+                    <p>Save your favorite fragrances for later</p>
+                </div>
+                
+                <div class="wishlist-content">
+                    <div class="wishlist-items" id="wishlist-items">
+                        <!-- Wishlist items will be loaded here -->
+                        <div class="empty-wishlist">
+                            <i class="fas fa-heart"></i>
+                            <h3>Your wishlist is empty</h3>
+                            <p>Start adding your favorite fragrances to your wishlist</p>
+                            <a href="products.html" class="cta-button">Browse Products</a>
+                        </div>
+                    </div>
+                    
+                    <div class="wishlist-sidebar">
+                        <div class="wishlist-summary">
+                            <h3>Wishlist Summary</h3>
+                            <div class="summary-item">
+                                <span>Items:</span>
+                                <span id="wishlist-count">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Total Value:</span>
+                                <span id="wishlist-total">$0.00</span>
+                            </div>
+                            <button class="add-all-to-cart-btn" id="add-all-to-cart" disabled>
+                                <i class="fas fa-shopping-cart"></i>
+                                Add All to Cart
+                            </button>
+                        </div>
+                        
+                        <div class="wishlist-actions">
+                            <h4>Quick Actions</h4>
+                            <button class="clear-wishlist-btn" id="clear-wishlist">
+                                <i class="fas fa-trash"></i>
+                                Clear Wishlist
+                            </button>
+                            <button class="share-wishlist-btn" id="share-wishlist">
+                                <i class="fas fa-share"></i>
+                                Share Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxe Fragrances</h3>
+                    <p>Your destination for luxury fragrances and beauty products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Perfumes</a></li>
+                        <li><a href="#">Colognes</a></li>
+                        <li><a href="#">Beauty Products</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxe Fragrances. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/wishlist.js" defer></script>
+</body>
+</html>

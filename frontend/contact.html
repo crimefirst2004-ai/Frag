@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Luxe Fragrances | Get in Touch</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Luxe Fragrances for customer support, inquiries, and assistance. Reach out to our team for help with orders, products, and more.">
+    <meta name="keywords" content="contact us, customer service, support, help, inquiries, Luxe Fragrances">
+    <meta name="author" content="Luxe Fragrances">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxefragrances.com/contact">
+    <meta property="og:title" content="Contact Us - Luxe Fragrances | Get in Touch">
+    <meta property="og:description" content="Contact Luxe Fragrances for customer support and inquiries.">
+    <meta property="og:image" content="https://luxefragrances.com/images/contact-og.jpg">
+    <meta property="og:site_name" content="Luxe Fragrances">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luxefragrances.com/contact">
+    <meta property="twitter:title" content="Contact Us - Luxe Fragrances | Get in Touch">
+    <meta property="twitter:description" content="Contact Luxe Fragrances for customer support and inquiries.">
+    <meta property="twitter:image" content="https://luxefragrances.com/images/contact-twitter.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://luxefragrances.com/contact">
+
+    <!-- Performance & Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://via.placeholder.com">
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Us - Luxe Fragrances",
+        "description": "Get in touch with Luxe Fragrances for customer support and inquiries.",
+        "url": "https://luxefragrances.com/contact"
+    }
+    </script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span class="top-bar-text">Free shipping on orders over $50</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#" class="top-bar-link" onclick="openHelpModal()">Help</a>
+                <a href="#" class="top-bar-link" onclick="openTrackOrderModal()">Track Order</a>
+                <a href="login.html" class="top-bar-link">Sign In</a>
+                <a href="login.html" class="top-bar-link">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <h1>Luxe Fragrances</h1>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for fragrances, beauty products..." id="search-input">
+                        <button type="button" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions" id="search-suggestions" style="display: none;"></div>
+                </div>
+
+                <div class="header-actions">
+                    <div class="user-account" onclick="window.location.href='account.html'">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </div>
+                    <div class="wishlist" onclick="window.location.href='account.html#wishlist'">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </div>
+                    <div class="cart" onclick="window.location.href='checkout.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="products.html" class="nav-link">Perfumes <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="products.html">Women's Perfumes</a></li>
+                        <li><a href="products.html">Men's Colognes</a></li>
+                        <li><a href="products.html">Unisex Fragrances</a></li>
+                        <li><a href="products.html">Niche Perfumes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="products.html" class="nav-link">Beauty <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="products.html">Skincare</a></li>
+                        <li><a href="products.html">Makeup</a></li>
+                        <li><a href="products.html">Hair Care</a></li>
+                        <li><a href="products.html">Body Care</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#flash-deals" class="nav-link">Flash Deals</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#best-sellers" class="nav-link">Best Sellers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">New Arrivals</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Clearance</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span>Contact Us</span>
+                </div>
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team for any questions or assistance</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>1-800-LUXE-FRAG (1-800-589-3372)</p>
+                                    <p>Monday - Friday: 9AM - 6PM EST</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>support@luxefragrances.com</p>
+                                    <p>We'll respond within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>123 Luxury Lane</p>
+                                    <p>Beverly Hills, CA 90210</p>
+                                    <p>United States</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Business Hours</h4>
+                                    <p>Monday - Sunday: 10:00 AM - 8:00 PM EST</p>
+                                    <p>Customer Service: 24/7 Live Chat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form class="contact-form-element">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="order">Order Inquiry</option>
+                                    <option value="product">Product Information</option>
+                                    <option value="shipping">Shipping & Delivery</option>
+                                    <option value="returns">Returns & Exchanges</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Please describe your inquiry..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxe Fragrances</h3>
+                    <p>Your destination for luxury fragrances and beauty products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html#perfumes">Perfumes</a></li>
+                        <li><a href="products.html#colognes">Colognes</a></li>
+                        <li><a href="products.html#beauty">Beauty Products</a></li>
+                        <li><a href="products.html#gift-sets">Gift Sets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxe Fragrances. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Track Order Modal -->
+    <div id="track-order-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Track Your Order</h3>
+                <button type="button" class="modal-close" onclick="closeTrackOrderModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="track-order-form">
+                    <p>Enter your order number and email address to track your order status.</p>
+                    <form id="track-order-form" onsubmit="handleTrackOrder(event)">
+                        <div class="form-group">
+                            <label for="order-number">Order Number</label>
+                            <input type="text" id="order-number" name="orderNumber" required placeholder="Enter your order number">
+                        </div>
+                        <div class="form-group">
+                            <label for="track-email">Email Address</label>
+                            <input type="email" id="track-email" name="email" required placeholder="Enter your email address">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Track Order</button>
+                            <button type="button" class="btn-secondary" onclick="closeTrackOrderModal()">Cancel</button>
+                        </div>
+                    </form>
+                    <div id="tracking-results" class="tracking-results" style="display: none;">
+                        <h4>Order Status</h4>
+                        <div class="order-status">
+                            <div class="status-timeline">
+                                <div class="status-step completed">
+                                    <div class="status-icon"><i class="fas fa-check"></i></div>
+                                    <div class="status-info">
+                                        <h5>Order Placed</h5>
+                                        <p>Your order has been confirmed</p>
+                                        <span class="status-date">Dec 15, 2024 - 2:30 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-step completed">
+                                    <div class="status-icon"><i class="fas fa-check"></i></div>
+                                    <div class="status-info">
+                                        <h5>Processing</h5>
+                                        <p>Your order is being prepared</p>
+                                        <span class="status-date">Dec 16, 2024 - 10:15 AM</span>
+                                    </div>
+                                </div>
+                                <div class="status-step active">
+                                    <div class="status-icon"><i class="fas fa-shipping-fast"></i></div>
+                                    <div class="status-info">
+                                        <h5>Shipped</h5>
+                                        <p>Your order is on its way</p>
+                                        <span class="status-date">Dec 17, 2024 - 3:45 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-step">
+                                    <div class="status-icon"><i class="fas fa-home"></i></div>
+                                    <div class="status-info">
+                                        <h5>Delivered</h5>
+                                        <p>Package will be delivered</p>
+                                        <span class="status-date">Estimated: Dec 19, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-details">
+                            <h4>Order Details</h4>
+                            <div class="order-info">
+                                <p><strong>Order Number:</strong> <span id="display-order-number">LF-2024-001234</span></p>
+                                <p><strong>Order Date:</strong> <span>December 15, 2024</span></p>
+                                <p><strong>Total Amount:</strong> <span>$89.99</span></p>
+                                <p><strong>Shipping Address:</strong> <span>123 Main St, City, State 12345</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tracking-message" class="message" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Help & Support</h3>
+                <button type="button" class="modal-close" onclick="closeHelpModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="help-content">
+                    <div class="help-section">
+                        <h4><i class="fas fa-shipping-fast"></i> Shipping Information</h4>
+                        <ul>
+                            <li><strong>Free Shipping:</strong> Available on orders over $50</li>
+                            <li><strong>Standard Shipping:</strong> 3-5 business days</li>
+                            <li><strong>Express Shipping:</strong> 1-2 business days</li>
+                            <li><strong>International Shipping:</strong> Available to select countries</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-undo"></i> Returns & Exchanges</h4>
+                        <ul>
+                            <li><strong>Return Policy:</strong> 30-day return window</li>
+                            <li><strong>Condition:</strong> Items must be unused and in original packaging</li>
+                            <li><strong>Refund Process:</strong> 5-7 business days after receiving return</li>
+                            <li><strong>Exchanges:</strong> Available for different sizes or products</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-lock"></i> Account & Security</h4>
+                        <ul>
+                            <li><strong>Password Reset:</strong> Use the "Forgot Password" link on login page</li>
+                            <li><strong>Account Security:</strong> Enable two-factor authentication</li>
+                            <li><strong>Order History:</strong> View all past orders in your account</li>
+                            <li><strong>Wishlist:</strong> Save items for later purchase</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-phone"></i> Contact Information</h4>
+                        <ul>
+                            <li><strong>Customer Service:</strong> 1-800-LUXE-FRAG (1-800-589-3372)</li>
+                            <li><strong>Email:</strong> support@luxefragrances.com</li>
+                            <li><strong>Live Chat:</strong> Available 24/7 on our website</li>
+                            <li><strong>Business Hours:</strong> Monday-Friday 9AM-6PM EST</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h4><i class="fas fa-question-circle"></i> Frequently Asked Questions</h4>
+                        <div class="faq-item">
+                            <h5>How do I track my order?</h5>
+                            <p>Click on "Track Order" in the top bar and enter your order number and email address.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>What if I forgot my password?</h5>
+                            <p>Click on "Forgot Password" on the login page to reset your password via email.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>Are your products authentic?</h5>
+                            <p>Yes, all our products are 100% authentic and sourced directly from authorized distributors.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>Do you ship internationally?</h5>
+                            <p>Yes, we ship to most countries. Shipping rates and delivery times vary by location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
